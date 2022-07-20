@@ -52,8 +52,15 @@ header h1 {
 	margin: 0;
 	color: var(--blanco);
 	text-align: center;
-
+	font-size: 4rem;
 	text-transform: uppercase;
+}
+@media (min-width: 800px) {
+	header h1 {
+		text-align: center;
+		font-size: 5rem;
+		text-transform: uppercase;
+	}
 }
 
 .formulario {
@@ -98,6 +105,7 @@ header h1 {
 	flex: 1;
 	font-size: 1.6rem;
 }
+
 .formulario input[type='submit'] {
 	background-color: #1048a4;
 	border: none;
@@ -245,6 +253,7 @@ main {
 	font-weight: 900;
 	color: var(--gris-oscuro);
 }
+
 .filtros select {
 	flex: 1;
 	padding: 1rem;
@@ -260,6 +269,12 @@ main {
 .listado-gastos h2 {
 	color: var(--gris-oscuro);
 	font-weight: 900;
+}
+@media (min-width: 800px) {
+	.listado-gastos h2 {
+		font-size: 3rem;
+		font-weight: 900;
+	}
 }
 .no-gastos {
 	text-align: center;
@@ -329,6 +344,7 @@ main {
 .nuevo-gasto img {
 	width: 5rem;
 }
+
 .nuevo-gasto img:hover {
 	cursor: pointer;
 }
@@ -403,4 +419,96 @@ body .modal {
 	align-items: center;
 	font-size: 2.4rem;
 	text-align: right;
+}
+
+/*** MEDIA QUERIES ***/
+@media (min-width: 375px) {
+	header h1 {
+		text-align: center;
+		font-size: 3rem;
+		text-transform: uppercase;
+	}
+	.listado-gastos h2 {
+		font-size: 2rem;
+		text-align: center;
+	}
+	.formulario label {
+		display: flex;
+		text-align: center;
+	}
+	.formulario input[type='number'] {
+		display: flex;
+		width: 100%;
+		text-align: center;
+	}
+	.filtros label {
+		font-size: 2rem;
+	}
+	.nuevo-gasto img {
+		width: 3rem;
+	}
+	.modal .cerrar-modal {
+		position: absolute;
+		right: 2rem;
+		top: 2rem;
+		width: 2rem;
+		height: 2rem;
+	}
+	.modal .formulario {
+		max-width: 80rem;
+		width: 32rem;
+		transition-property: all;
+		transition-duration: 300ms;
+		transition-timing-function: ease-in;
+		opacity: 0;
+	}
+	.contenido-gasto img {
+		width: 4rem;
+		align-items: center;
+	}
+}
+@media (min-width: 360px) {
+	header h1 {
+		text-align: center;
+		font-size: 3rem;
+		text-transform: uppercase;
+	}
+	h2 {
+		font-size: 2rem;
+		text-align: center;
+	}
+	.formulario label {
+		display: flex;
+		text-align: center;
+	}
+	.formulario input[type='number'] {
+		display: flex;
+		width: 100%;
+		text-align: center;
+	}
+	.filtros label {
+		font-size: 2rem;
+	}
+	.nuevo-gasto img {
+		width: 3rem;
+	}
+	.modal .cerrar-modal {
+		position: absolute;
+		right: 2rem;
+		top: 2rem;
+		width: 2rem;
+		height: 2rem;
+	}
+	.modal .formulario {
+		max-width: 80rem;
+		width: 32rem;
+		transition-property: all;
+		transition-duration: 300ms;
+		transition-timing-function: ease-in;
+		opacity: 0;
+	}
+	.contenido-gasto img {
+		width: 4rem;
+		align-items: center;
+	}
 }
