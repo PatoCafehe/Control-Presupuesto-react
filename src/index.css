@@ -52,14 +52,16 @@ header h1 {
 	margin: 0;
 	color: var(--blanco);
 	text-align: center;
-	font-size: 4rem;
 	text-transform: uppercase;
 }
-@media (min-width: 800px) {
+@media (max-width: 375px) {
 	header h1 {
+		padding: 2rem 0;
+		margin: 0;
+		color: var(--blanco);
 		text-align: center;
-		font-size: 5rem;
 		text-transform: uppercase;
+		font-size: 30px;
 	}
 }
 
@@ -95,6 +97,24 @@ header h1 {
 	text-align: center;
 	margin-bottom: 2rem;
 }
+@media (max-width: 375px) {
+	.formulario label {
+		color: var(--azul);
+		font-size: 2.8rem;
+		text-align: left;
+		margin-bottom: 2rem;
+	}
+}
+@media (max-width: 415px) {
+	.formulario label {
+		color: var(--azul);
+		font-size: 2.8rem;
+		text-align: left;
+		margin: 20px;
+		margin-top: -10px;
+		margin-bottom: 2rem;
+	}
+}
 
 .formulario input[type='text'],
 .formulario input[type='number'] {
@@ -105,7 +125,30 @@ header h1 {
 	flex: 1;
 	font-size: 1.6rem;
 }
-
+@media (max-width: 375px) {
+	.formulario input[type='text'],
+	.formulario input[type='number'] {
+		background-color: var(--gris-claro);
+		border-radius: 1rem;
+		padding: 1rem;
+		border: none;
+		flex: 1;
+		max-width: 75%;
+		font-size: 1.2rem;
+	}
+}
+@media (max-width: 415px) {
+	.formulario input[type='text'],
+	.formulario input[type='number'] {
+		background-color: var(--gris-claro);
+		border-radius: 1rem;
+		padding: 1rem;
+		border: none;
+		flex: 1;
+		max-width: 85%;
+		font-size: 1.2rem;
+	}
+}
 .formulario input[type='submit'] {
 	background-color: #1048a4;
 	border: none;
@@ -123,6 +166,11 @@ header h1 {
 	.formulario input[type='submit'] {
 		display: block;
 		padding: 1rem 5rem;
+	}
+}
+@media (max-width: 375px) {
+	.formulario input[type='submit'] {
+		border-radius: 6px;
 	}
 }
 .formulario input[type='submit']:hover {
@@ -153,9 +201,6 @@ header h1 {
 	border-left: 5px solid #b91c1c;
 	color: #b91c1c;
 }
-.alerta.success {
-}
-
 .contenedor {
 	width: 90%;
 	max-width: 80rem;
@@ -248,12 +293,35 @@ main {
 	align-items: center;
 	gap: 2rem;
 }
+@media (max-width: 375px) {
+	.filtros .campo {
+		display: grid;
+	}
+	.filtros label {
+		font-size: 2rem;
+		font-weight: 900;
+		color: var(--gris-oscuro);
+		gap: 5px;
+		text-align: center;
+	}
+}
+@media (max-width: 415px) {
+	.filtros .campo {
+		display: grid;
+	}
+	.filtros label {
+		font-size: 2rem;
+		font-weight: 900;
+		color: var(--gris-oscuro);
+		gap: 5px;
+		text-align: center;
+	}
+}
 .filtros label {
 	font-size: 3rem;
 	font-weight: 900;
 	color: var(--gris-oscuro);
 }
-
 .filtros select {
 	flex: 1;
 	padding: 1rem;
@@ -270,10 +338,9 @@ main {
 	color: var(--gris-oscuro);
 	font-weight: 900;
 }
-@media (min-width: 800px) {
+@media (max-width: 375px) {
 	.listado-gastos h2 {
-		font-size: 3rem;
-		font-weight: 900;
+		text-align: center;
 	}
 }
 .no-gastos {
@@ -288,6 +355,38 @@ main {
 	gap: 2rem;
 	margin-bottom: 2rem;
 	width: 100%;
+}
+@media (max-width: 375px) {
+	.gasto {
+		display: block;
+		justify-content: space-between;
+		align-items: center;
+		gap: 2rem;
+		margin-bottom: 2rem;
+		width: 100%;
+	}
+	.cantidad-gasto {
+		font-size: 2.4rem;
+		color: var(--negro);
+		font-weight: 900;
+		text-align: center;
+	}
+}
+@media (max-width: 415px) {
+	.gasto {
+		display: block;
+		justify-content: space-between;
+		align-items: center;
+		gap: 2rem;
+		margin-bottom: 2rem;
+		width: 100%;
+	}
+	.cantidad-gasto {
+		font-size: 2.4rem;
+		color: var(--negro);
+		font-weight: 900;
+		text-align: center;
+	}
 }
 
 .cantidad-gasto {
@@ -344,7 +443,6 @@ main {
 .nuevo-gasto img {
 	width: 5rem;
 }
-
 .nuevo-gasto img:hover {
 	cursor: pointer;
 }
@@ -395,6 +493,55 @@ body .modal {
 .modal label {
 	text-align: left;
 }
+@media (max-width: 375px) {
+	.modal label {
+		display: block;
+		text-align: center;
+	}
+	.modal input[type='text'],
+	.modal input[type='number'] {
+		max-width: 78%;
+		padding: 10px;
+		margin: 0 30px;
+		text-align: center;
+		font-size: 15px;
+	}
+	.modal select {
+		width: 80%;
+		margin: 0 25px;
+	}
+	.modal input[type='submit'] {
+		display: block;
+		align-items: center;
+		width: 80%;
+		margin: 40px 22px;
+	}
+}
+@media (max-width: 415px) {
+	.modal label {
+		display: block;
+		text-align: center;
+	}
+	.modal input[type='text'],
+	.modal input[type='number'] {
+		max-width: 90%;
+		padding: 10px;
+		margin: 0 30px;
+		text-align: center;
+		font-size: 15px;
+	}
+	.modal select {
+		width: 86%;
+		margin: 0 25px;
+	}
+	.modal input[type='submit'] {
+		display: block;
+		align-items: center;
+		width: 86%;
+		margin: 50px 22px;
+		border-radius: 10px;
+	}
+}
 
 .CircularProgressbar .CircularProgressbar-text {
 	font-size: 1rem !important;
@@ -419,96 +566,4 @@ body .modal {
 	align-items: center;
 	font-size: 2.4rem;
 	text-align: right;
-}
-
-/*** MEDIA QUERIES ***/
-@media (min-width: 375px) {
-	header h1 {
-		text-align: center;
-		font-size: 3rem;
-		text-transform: uppercase;
-	}
-	.listado-gastos h2 {
-		font-size: 2rem;
-		text-align: center;
-	}
-	.formulario label {
-		display: flex;
-		text-align: center;
-	}
-	.formulario input[type='number'] {
-		display: flex;
-		width: 100%;
-		text-align: center;
-	}
-	.filtros label {
-		font-size: 2rem;
-	}
-	.nuevo-gasto img {
-		width: 3rem;
-	}
-	.modal .cerrar-modal {
-		position: absolute;
-		right: 2rem;
-		top: 2rem;
-		width: 2rem;
-		height: 2rem;
-	}
-	.modal .formulario {
-		max-width: 80rem;
-		width: 32rem;
-		transition-property: all;
-		transition-duration: 300ms;
-		transition-timing-function: ease-in;
-		opacity: 0;
-	}
-	.contenido-gasto img {
-		width: 4rem;
-		align-items: center;
-	}
-}
-@media (min-width: 360px) {
-	header h1 {
-		text-align: center;
-		font-size: 3rem;
-		text-transform: uppercase;
-	}
-	h2 {
-		font-size: 2rem;
-		text-align: center;
-	}
-	.formulario label {
-		display: flex;
-		text-align: center;
-	}
-	.formulario input[type='number'] {
-		display: flex;
-		width: 100%;
-		text-align: center;
-	}
-	.filtros label {
-		font-size: 2rem;
-	}
-	.nuevo-gasto img {
-		width: 3rem;
-	}
-	.modal .cerrar-modal {
-		position: absolute;
-		right: 2rem;
-		top: 2rem;
-		width: 2rem;
-		height: 2rem;
-	}
-	.modal .formulario {
-		max-width: 80rem;
-		width: 32rem;
-		transition-property: all;
-		transition-duration: 300ms;
-		transition-timing-function: ease-in;
-		opacity: 0;
-	}
-	.contenido-gasto img {
-		width: 4rem;
-		align-items: center;
-	}
 }
